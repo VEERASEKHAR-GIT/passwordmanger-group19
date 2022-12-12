@@ -34,14 +34,6 @@ public partial class RegisterPage : ContentPage
         email = x.Text;
     }
 
-    private void Entry_TextChanged_1(object sender, TextChangedEventArgs e)
-    {
-        var x = (Entry)sender;
-        pass = x.Text;
-    }
 
-    private void Button_Clicked_1(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new RegisterPage());
-    }
+
 }
