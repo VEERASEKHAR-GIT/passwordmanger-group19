@@ -5,7 +5,12 @@
              Title="NewEntryPage">
     <VerticalStackLayout>
         <Label 
-
+            Text="Store New Password"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Enter App Name" TextChanged="Entry_TextChanged" />
+        <Entry Placeholder="Enter App password" TextChanged="Entry_TextChanged_1"/>
+        <Button Text="Save Entry" Clicked="Button_Clicked"/>
                
     </VerticalStackLayout>
 </ContentPage>
