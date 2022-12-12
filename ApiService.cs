@@ -16,33 +16,7 @@ namespace PasswodManager
 
         public List<PasswordItem> listOfItems { get; private set; }
 
-        public ApiService()
-        {
-            _client = new HttpClient();
-            _serializerOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
-            };
-        }
 
-        public async Task<List<PasswordItem>> get()
-        {
-            String uid = await SecureStorage.GetAsync("uid");
-            String apiUrl = $"https://pocketbase-abby.fly.dev/api/collections/secrets/records?filter=(userId='{uid}')";
-            listOfItems = new List<PasswordItem>();
-
-            Uri uri = new Uri(string.Format(apiUrl, string.Empty));
-            try
-            {
-                HttpResponseMessage response = await _client.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-                    var c = JsonSerializer.Deserialize<PasswordApiModel>(content, _serializerOptions);
-                    listOfItems = c.items;
-                }
-            }
             catch (Exception ex)
             {
                 Console.WriteLine(@"\tERROR {0}", ex.Message);
