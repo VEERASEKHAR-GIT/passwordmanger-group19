@@ -10,7 +10,7 @@
             HorizontalOptions="Center" />
 
          <Entry Placeholder="Enter emailId" TextChanged="Entry_TextChanged"/>
-        
+        <Entry Placeholder="Enter Password" TextChanged="Entry_TextChanged_1"/>
         <Button Clicked="Button_Clicked" Text="Login"/>
         <Button Text="To Register click here" Clicked="Button_Clicked_1" />
     </VerticalStackLayout>
