@@ -1,1 +1,13 @@
 # passwordmanger-group19
+veerasekhar patibandla 
+Update PasswodManager.csproj d63fc52aaaf2fea40e015a2055389af77506f94b
+Update LoginPage.xaml.cs 8866f375271d40da759cedc2f2fe480a4dcf9f9e
+Update AppShell.xaml.cs af0a9ea11c9c06a16816a6687dd253f6ac281247
+Update ApiService.cs 2259c9250c9d715bddd4e5142ee9d4351a7da5a1
+Update RegisterPage.xaml.cs 260a2317ddf79da8e97c1eca96a29a6beac245e2
+Update PmViewManager.cs 795c9608a818d08354c6465d1c89ad4483ff03ca
+Update PasswodManager.csproj.user 4f99e5c169ef306d25623f648ccf7616a24f0899
+Update PasswodManager.csproj 7c2ca5fa1c62039b0836e0f233bab27008d6a170
+Dheeraj reddy badduri
+
+Harshavardhan guttikonda
