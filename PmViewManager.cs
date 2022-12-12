@@ -36,7 +36,10 @@ namespace PasswodManager
             OnPropertyChanged();
         }
 
-
+        public ObservableCollection<PasswordItem> passwords
+        {
+            get => _passwords;
+        }
 
         public async
         Task
