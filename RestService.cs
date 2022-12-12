@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace PasswodManager
 {
-    public class RestService
-    {
-    }
+
+    
 }
