@@ -102,23 +102,7 @@ namespace PasswodManager
             Uri uri = new Uri(string.Format("https://pocketbase-abby.fly.dev/api/collections/users/auth-with-password", string.Empty));
 
             try
-            {
-                var loginModel = new LoginIdentityModel();
-                loginModel.identity = email;
-                loginModel.password = pass;
-                string json = JsonSerializer.Serialize<LoginIdentityModel>(loginModel, _serializerOptions);
-                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = null;
-
-                response = await _client.PostAsync(uri, content);
-                if (response.IsSuccessStatusCode)
-                {
-                    var xc = await response.Content.ReadAsStringAsync();
-                    var c = JsonSerializer.Deserialize<AuthModel>(xc, _serializerOptions);
-                    return c.record.username;
-                }
-            }
             catch (Exception ex)
             {
 
