@@ -18,7 +18,8 @@
                     <DataTemplate>
                         <ViewCell>
                             <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-
+                                <Label WidthRequest="500" HorizontalOptions="StartAndExpand" Text="{Binding app}" FontSize="Medium"></Label>
+                                <Label WidthRequest="500" HorizontalOptions="StartAndExpand" Text="{Binding password}" FontSize="Medium"></Label>
                             </HorizontalStackLayout>
                         </ViewCell>
                     </DataTemplate>
