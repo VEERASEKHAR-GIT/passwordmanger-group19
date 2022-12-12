@@ -71,7 +71,31 @@ namespace PasswodManager
             }
         }
 
-        
+        public async Task<bool> createUser(string email, string pass)
+        {
+            Uri uri = new Uri(string.Format("https://pocketbase-abby.fly.dev/api/collections/users/records", string.Empty));
+
+            try
+            {
+                var loginModel = new LoginModel();
+                loginModel.email = email;
+                loginModel.password = pass;
+                loginModel.passwordConfirm = pass;
+                string json = JsonSerializer.Serialize<LoginModel>(loginModel, _serializerOptions);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = null;
+
+                response = await _client.PostAsync(uri, content);
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
+        }
+
         
 
         public async Task<String> loginUser(string email, string pass)
