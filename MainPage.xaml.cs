@@ -10,6 +10,9 @@ public partial class MainPage : ContentPage
 		BindingContext = App.vm;
 	}
 
-
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new NewEntryPage());
+	}
 }
 
