@@ -10,7 +10,20 @@ public partial class RegisterPage : ContentPage
     }
 
 
-
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        var apiService = new ApiService();
+        var isDone = await apiService.createUser(email, pass);
+        if (isDone)
+        {
+            await DisplayAlert("Alert", "Register Success, Please login", "OK");
+            await Navigation.PushAsync(new LoginPage());
+        }
+        else
+        {
+            await DisplayAlert("Alert", "Register Error, Please try again", "OK");
+        }
+    }
 
 
 
