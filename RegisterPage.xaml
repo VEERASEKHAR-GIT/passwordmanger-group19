@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PasswodManager.RegisterPage"
+             Title="RegisterPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Register !"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Enter emailId" TextChanged="Entry_TextChanged"/>
+        <Entry Placeholder="Enter Password" TextChanged="Entry_TextChanged_1"/>
+        <Button Clicked="Button_Clicked" Text="Login"/>
+        <Button Text="To Register click here" Clicked="Button_Clicked_1" />
+    </VerticalStackLayout>
+</ContentPage>

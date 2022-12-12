@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PasswodManager.NewEntryPage"
+             Title="NewEntryPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Store New Password"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Enter App Name" TextChanged="Entry_TextChanged" />
+        <Entry Placeholder="Enter App password" TextChanged="Entry_TextChanged_1"/>
+        <Button Text="Save Entry" Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
